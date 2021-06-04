@@ -3,54 +3,54 @@ block variables
 
 doctype html
 html(lang="ru-RU")
-	head
-		meta(charset="utf-8")
-		title #{title}
-		<!--[if IE]>
-		meta(http-equiv='X-UA-Compatible', content="IE = edge")
-		<![endif]-->
-		meta(name="viewport" content="width=device-width,initial-scale=1")
-		meta(name="keywords" content="")
-		link(rel="stylesheet" type='text/css' href="css/styles.min.css")
-		link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
-		//fonts
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    head
+        meta(charset="utf-8")
+        title #{title}
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        link(rel="stylesheet" type='text/css' href="css/styles.min.css")
+        link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
+        //fonts
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
-		<!--[if lt IE 9]>
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
-		<![endif]-->
-	body(class=pageClass)
-			include ../modules/header/header
+        <!--[if lt IE 9]>
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+        <![endif]-->
+    body(class=pageClass)
+        include ../modules/header/header
 
-			//#content.site-content
-			.content
-				block content
-
-
-			include ../modules/footer/footer
+        //#content.site-content
+        .content
+            block content
 
 
+        include ../modules/footer/footer
 
-			//#formCallback.white-popup.mfp-hide(role="dialog" aria-labelledby="modal-title" aria-describedby="modal-content")
-			//	.modal-title Contacts Us
-			//	#modal-content
-			//		form.form-screen__form
-			//			.form-screen__row
-			//				.form-screen__label Name
-			//				.form-screen__input
-			//					input(type="text")
-			//			.form-screen__row
-			//				.form-screen__label Email
-			//				.form-screen__input
-			//					input(type="text")
-			//			.form-screen__row.textarea-row
-			//				.form-screen__label Message
-			//				.form-screen__input
-			//					textarea(rows="8")
-			//			.form-screen__row
-			//				button(type="submit").form-screen__btn.btn-active Send
-		script(src="js/libs.min.js")
-		script(src="js/main.min.js")
-		block script
+
+
+        //#formCallback.white-popup.mfp-hide(role="dialog" aria-labelledby="modal-title" aria-describedby="modal-content")
+        //	.modal-title Contacts Us
+        //	#modal-content
+        //		form.form-screen__form
+        //			.form-screen__row
+        //				.form-screen__label Name
+        //				.form-screen__input
+        //					input(type="text")
+        //			.form-screen__row
+        //				.form-screen__label Email
+        //				.form-screen__input
+        //					input(type="text")
+        //			.form-screen__row.textarea-row
+        //				.form-screen__label Message
+        //				.form-screen__input
+        //					textarea(rows="8")
+        //			.form-screen__row
+        //				button(type="submit").form-screen__btn.btn-active Send
+    script(src="js/libs.min.js")
+    script(src="js/main.min.js")
+    block script
