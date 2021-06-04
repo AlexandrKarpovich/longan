@@ -1,0 +1,67 @@
+// Colors
+$white: #ffffff;
+$black: #000000;
+
+$black-first: #23242A;
+$black-second: #383838;
+$black-third: #333333;
+
+$purple: #745EF9;
+$purple-bg: #F8F7FF;
+
+$red: #FD76A3;
+$red-bg: #FEE2EA;
+
+$orange: #FFAC7A;
+$orange-bg: #FFF2D4;
+
+//size
+$html-size: 9px;
+$html-size-phablet: 13px;
+$html-size-tablet: 15px;
+
+
+//font
+$font-family: "Inter", sans-serif;
+
+// wight
+$medium: 500;
+$bold: 600;
+$extrabold: 900;
+$normal: 400;
+$light: 300;
+
+$breakpoints: (
+    "phone": 320px,
+    "phone-wide": 480px,
+    "phablet": 580px,
+    "tablet": 768px,
+    "tablet-middle": 980px,
+    "tablet-hor": 1150px,
+    "desktop": 1440px,
+    "desktop-big": 1920px,
+    "desktop-huge": 2500px,
+    "desktop-max": 4000px,
+);
+
+
+$container: 1200px;
+
+
+
+
+//old ===============
+//$text-color: #9DAFBD;
+//$main: #5C5C5C;
+//$main-btn: #4FCC64;
+//$grey-color: #C3CFD9;
+//$grey-bg: #FBFBFD;
+//$darkgrey-bg: #C4C4C4;
+//$darkgrey-color: #969696;
+//$lightgrey-bg: #FBFBFD;
+// Sizes
+//$title-font: 46.8696px;
+//$title-line-height: 55px;
+//$small-font: 14px;
+//$font-18: 18px;
+//$standart-line-height: 16px;

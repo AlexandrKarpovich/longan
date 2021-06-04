@@ -1,0 +1,39 @@
+extends template/main
+
+block variables
+    - var title = 'contacts'
+    - var pageClass = 'contacts'
+
+block content
+
+    .container
+        .main-screen
+            h2.title Contact us
+                br
+                | or schedule a meeting
+
+
+            .location
+                .item.address
+                    .item__title Office
+
+                    .item__text
+                        | 03189,
+                        br
+                        | Kyiv, Williams str 8E
+
+                    .item__text
+                        | LONGAN GROUP LTD
+                        br
+                        | Reg No 43453566
+
+
+                .item.contacts
+                    .item__title Contact us
+                    a.item__text.mail(href="mailto:info@longangroup.net") info@longangroup.net
+                    a.item__text.number(href="tel:+380506041832") +380 50 604 1832
+
+
+
+    include modules/section/get_in_touch-contacts-section
+

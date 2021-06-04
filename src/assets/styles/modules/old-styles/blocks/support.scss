@@ -1,0 +1,28 @@
+.support {
+
+    &__info {
+
+        .title {
+            margin-bottom: 73px;
+            font-weight: $normal;
+        }
+
+        .advantages__items {
+            margin-top: 86px;
+            max-width: 100%;
+
+            @include respond-to("tablet") {
+                margin-top: 40px;
+            }
+        }
+
+        .advantages__item {
+            margin-top: 0;
+            flex: 0 0 15%;
+
+            @include respond-to("tablet") {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}

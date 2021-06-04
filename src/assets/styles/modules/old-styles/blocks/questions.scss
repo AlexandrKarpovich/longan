@@ -1,0 +1,42 @@
+.questions {
+    padding: 107px 123px;
+    margin-top: 102px;
+    margin-bottom: 87px;
+    background: $white;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: $title-font;
+        line-height: 55px;
+        color: $main;
+
+        @include respond-to("tablet") {
+            font-size: 28px;
+            line-height: 37px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        font-size: $font-18;
+        line-height: 145%;
+        letter-spacing: -.5px;
+        color: $text-color;
+    }
+
+    &__btn {
+
+        .btn-active {
+            max-width: 199px;
+        }
+    }
+
+    @include respond-to("tablet") {
+        padding: 20px 30px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}

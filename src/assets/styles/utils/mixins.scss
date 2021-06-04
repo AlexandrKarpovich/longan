@@ -1,0 +1,106 @@
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@mixin respond-to-min($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@mixin flex-with-space-between() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    @include respond-to('phablet') {
+        display: block;
+    }
+}
+
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin font-face($name, $file) {
+    @font-face {
+        font-family: "#{$name}";
+        src: url("../fonts/#{$file}.ttf"); //we need woff too
+        font-display: swap;
+    }
+}
+
+@mixin abs-position ($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+/*
+ usage
+ @include keyframes(background) {
+   0% {
+     background: white;
+   }
+   50% {
+     background: lightblue;
+   }
+   100% {
+     background: royalblue;
+   }
+ }
+*/

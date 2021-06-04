@@ -1,0 +1,24 @@
+@import "header/header";
+@import "template/template";
+@import "footer/footer";
+@import "libs/magnific";
+
+//page
+@import "pages/main";
+@import "pages/legal";
+@import "pages/accounting";
+@import "pages/contacts";
+
+//section
+@import "section/step_by_step-section";
+@import "section/why_longan-section";
+@import "section/solutions-section";
+@import "section/what_we_do-section";
+@import "section/get_in_touch-section";
+@import "section/get_in_touch-contacts-section";
+
+//blocks
+@import "blocks/form_small-block";
+
+
+

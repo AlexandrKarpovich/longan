@@ -1,0 +1,29 @@
+.list {
+
+    &__item {
+        margin-bottom: 91px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include respond-to("tablet") {
+            margin-bottom: 41px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 28px;
+        font-size: 28px;
+        line-height: 145%;
+        letter-spacing: -.1px;
+        color: $main;
+    }
+
+    &__text {
+        font-size: $font-18;
+        line-height: 145%;
+        letter-spacing: -.5px;
+        color: $text-color;
+    }
+}

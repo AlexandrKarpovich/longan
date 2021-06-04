@@ -1,0 +1,73 @@
+.backend,
+.databases {
+    background-color: $lightgrey-bg;
+    padding-top: 159px;
+    padding-bottom: 159px;
+
+    .container {
+        max-width: 944px;
+    }
+
+    .text {
+        margin-top: 37px;
+        margin-bottom: 109px;
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include respond-to("tablet") {
+            margin-bottom: 60px;
+            display: block;
+        }
+    }
+
+    &__icon {
+        
+        flex: 0 0 20%;
+
+        img {
+            max-width: 120px;
+        }
+
+        @include respond-to("tablet"){
+            display: flex;
+            justify-content: center;
+        }
+        
+    }
+
+    &__info {
+        flex: 0 0 70%;
+    }
+
+    &__title {
+        margin-bottom: 21px;
+        font-size: 34px;
+        line-height: 46px;
+        letter-spacing: -.1px;
+        color: $main;
+        @include respond-to("tablet") {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        font-size: $font-18;
+        line-height: 145%;
+        letter-spacing: -.5px;
+        color: $text-color;
+    }
+
+    @include respond-to("tablet") {
+        padding-top: 59px;
+        padding-bottom: 59px;
+    }
+}

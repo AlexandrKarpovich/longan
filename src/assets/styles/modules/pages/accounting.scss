@@ -1,0 +1,33 @@
+.accounting {
+    .get_in_touch {
+        background: #FFF2D4;
+    }
+
+    .our_service {
+        .title {
+            span {
+                color: #FFAC7A;
+            }
+        }
+    }
+    .accounting_services {
+        &__inner {
+            max-width: 910px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @include respond-to-min("tablet") {
+                flex-wrap: nowrap;
+            }
+
+            .title {
+                text-align: left;
+                padding: 0 20px 20px 0;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,12 @@
+extends ../../template/main
+
+block variables
+    - var title = 'backend-page'
+    - var pageClass = 'backend-page'
+
+block content
+    include modules/blocks/form-screen-backend
+    .container
+        include modules/blocks/backend
+        include modules/blocks/backend-info
+    include modules/blocks/questions

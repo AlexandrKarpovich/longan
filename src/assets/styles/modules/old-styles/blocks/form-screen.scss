@@ -1,0 +1,115 @@
+//.form-screen {
+//    padding: 109px 0;
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: space-between;
+//
+//    &__form {
+//        width: 100%;
+//        padding: 37px 30px;
+//        background: $white;
+//        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+//        border-radius: 5px;
+//
+//        display: flex;
+//        justify-content: space-between;
+//        align-items: center;
+//
+//        input,
+//        textarea {
+//            min-height: 30px;
+//            padding: 15px;
+//            width: 100%;
+//            background-color: transparent;
+//            border: none;
+//            height: 100%;
+//            resize: none;
+//            color: $text-color;
+//        }
+//
+//        @include respond-to("tablet") {
+//            width: auto;
+//        }
+//
+//    }
+//
+//    &__label {
+//        padding: 0 15px 0 15px;
+//        position: absolute;
+//        top: 22px;
+//        font-weight: 300;
+//        font-size: 12px;
+//        line-height: 14px;
+//        letter-spacing: -0.272727px;
+//        color: $text-color;
+//        transition: all .15s linear;
+//    }
+//
+//    &__row {
+//        width: 50%;
+//        position: relative;
+//        margin-bottom: 21px;
+//        background: #F7F9FA;
+//        border: 1px solid #D1DBE3;
+//        border-radius: 5px;
+//
+//        &.textarea-row {
+//            textarea {
+//                padding: 20px 15px;
+//            }
+//        }
+//
+//        &.active {
+//
+//            .form-screen__label {
+//                top: 8px;
+//            }
+//        }
+//
+//        &:last-child {
+//            background: transparent;
+//            border: none;
+//        }
+//    }
+//
+//    .btn-active {
+//        max-width: 100%;
+//    }
+//
+//    &.contacts {
+//
+//        .title {
+//            margin-bottom: 15px;
+//        }
+//
+//        .form-screen__right {
+//            flex: 0 0 45%;
+//        }
+//
+//        .form-screen__right {
+//            flex: 0 0 45%;
+//        }
+//
+//        .form-screen__form {
+//            width: 90%;
+//
+//
+//            @include respond-to("tablet") {
+//                width: 100%;
+//            }
+//            @include respond-to("phone-wide") {
+//                width: 82%;
+//            }
+//        }
+//    }
+//
+//
+//    @include respond-to("tablet") {
+//        display: block;
+//        padding: 40px 20px;
+//    }
+//}
+//
+//::placeholder {
+//    color: $text-color;
+//}

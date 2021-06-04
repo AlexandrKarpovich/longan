@@ -1,0 +1,27 @@
+extends template/main
+
+block variables
+    - var title = 'accounting'
+    - var pageClass = 'accounting'
+
+block content
+    include modules/section/main-section
+
+    section.our_service
+        .container.our_service__inner
+            .name Longan Group
+            .title Our service knows no bounds.
+                span Our multinational team of experts has wide-ranging experience.
+            .text We provide the best solutions for our customers.
+
+    include modules/section/what_we_do-section
+
+    section.accounting_services
+        .container.accounting_services__inner
+            h2.title Accounting services
+            .box
+                .subtitle We help international companies function more efficiently with comprehensive accounting services that enable a deep insight into business functions.
+                a.box__link(href="#") Learn more
+
+    include modules/section/get_in_touch-section
+

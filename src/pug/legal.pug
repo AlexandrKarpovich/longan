@@ -1,0 +1,26 @@
+extends template/main
+
+block variables
+    - var title = 'legal'
+    - var pageClass = 'legal'
+
+block content
+    include modules/section/main-section
+
+    section.our_service
+        .container.our_service__inner
+            .name Longan Group
+            .title Our service knows no bounds.
+                span Our multinational team of experts has wide-ranging experience.
+            .text We offer a unique experience and knowledge of the specifics of work in most countries around the world and provide expert assessments with actionable reports and comprehensive analysis that enable to get only legally sound and optimal solutions for your business.We offer a unique experience and knowledge of the specifics of work in most countries around the world and provide expert assessments with actionable reports and comprehensive analysis that enable to get only legally sound and optimal solutions for your business.
+
+    include modules/section/what_we_do-section
+
+    section.accounting_services
+        .container.accounting_services__inner
+            h2.title Legal services
+            .box
+                .subtitle We provide international companies from different jurisdictions  with high-quality legal services.
+                a.box__link(href="#") Learn more
+
+    include modules/section/get_in_touch-section

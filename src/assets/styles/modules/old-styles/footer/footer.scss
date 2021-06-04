@@ -1,0 +1,65 @@
+.footer {
+    background-color: $white;
+    padding: 90px 0;
+    color: $grey-color;
+    font-size: $small-font;
+    line-height: $font-18;
+    letter-spacing: -.318182px;
+    box-shadow: inset 1px 1px 8px rgba(0, 0, 0, .12);
+
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include respond-to("tablet") {
+            display: block;
+        }
+    }
+
+    &__bottom {
+        margin-top: 79px;
+        font-size: 10px;
+        line-height: 150%;
+        letter-spacing: -.05em;
+    }
+
+    &__link {
+        font-size: $small-font;
+        line-height: $font-18;
+        letter-spacing: -.5px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        display: inline-block;
+        margin-bottom: 31px;
+        text-transform: capitalize;
+        color: $main-btn;
+        text-decoration: none;
+
+        &:hover {
+            opacity: .8;
+        }
+
+        @include respond-to("tablet") {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__text_upper {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 152.7%;
+        text-transform: uppercase;
+    }
+
+    &__column {
+        flex: 0 0 15%;
+    }
+
+    @include respond-to("tablet") {
+        text-align: center;
+    }
+}

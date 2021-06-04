@@ -1,0 +1,29 @@
+section#touch.get_in_touch-contacts
+    .container
+        h2.title Get in touch with us
+        .subtitle Have specific questions, or want a guided tour of our services?  Contact us for more information!
+
+
+        form.form-screen__form
+            .form-screen__row
+                .form-screen__label Name
+                .form-screen__input
+                    input(type="text")
+            .form-screen__row
+                .form-screen__label Email
+                .form-screen__input
+                    input(type="text")
+            .form-screen__row.textarea-row
+                .form-screen__label Message
+                .form-screen__input
+                    input(type="text")
+
+            .form-screen__row.phone-row
+                .form-screen__label Phone
+                .form-screen__input
+                    input#phone(type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required)
+
+            .form-screen__row
+                .form-screen__text Longan Group uses the information you provide to us to contact you about our relevant content, products and services. For more information, check out our Privacy Policy.
+            .form-screen__row
+                button.form-screen__btn.btn-active(type="submit") Send

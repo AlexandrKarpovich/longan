@@ -1,0 +1,153 @@
+.header {
+
+    &__top {
+        padding: 27px 0;
+        background-color: $white;
+        box-shadow: inset 1px 1px 8px rgba(0, 0, 0, .12);
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            @include respond-to("tablet") {
+                display: block;
+            }
+        }
+    }
+
+    &__logo {
+        flex: 0 0 15%;
+
+        svg {
+            max-width: 120px;
+            height: 43px;
+        }        
+        @include respond-to("phone-wide" and "tablet") {
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
+    &__menu {
+        flex: 0 0 62%;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        align-items:center;
+        @include respond-to("tablet") {
+            padding-left: 0;
+            justify-content: center;
+        }
+        @include respond-to("phone-wide") {
+            flex-wrap: nowrap;
+            padding-left: 0;
+        }
+    }
+
+    &__item {
+        margin-right: 51px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include respond-to("tablet") {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        padding: 10px 23px;
+        font-size: $small-font;
+        line-height: 16px;
+        letter-spacing: -.5px;
+        color: $text-color;
+        text-decoration: none;
+        transition: all .3s linear;
+        &.disabled {
+            opacity: .5;
+
+            &:hover {
+                color: $text-color;
+                background-color: transparent;
+            }
+        }
+
+        &:hover,
+        &.active {
+            color: $main-btn;
+            background-color: #EEF2F4;
+            border-radius: 36px;
+        }
+    }
+
+    &__bottom {
+        opacity: 0;
+        max-height: 0;
+        background-color: rgba(74, 172, 233, 0.05);
+        transition: all .3s ease-in;
+        box-shadow: inset 1px 1px 8px rgba(0, 0, 0, .12);
+
+        &.active {
+            opacity: 1;
+            padding: 22px 0;
+            max-height: 62px;
+            
+        
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            @include respond-to("tablet") {
+                display: block;
+            }
+        }
+
+        .header__menu {
+            margin: 0 auto;
+            padding-left: 0;
+            flex: 0 0 57%;
+            @include respond-to("phone-wide") {
+                margin: 0 0 0 32px;
+            }
+        }
+
+        .header__link {
+            background-color: transparent;
+
+            &:hover {
+                color: $main-btn;
+            }
+
+            &.disabled {
+                color: $text-color;
+            }
+
+            &:first-child{
+                padding-left: 0;
+            }
+        }
+
+        
+    }
+
+    &__btn {
+        flex: 0 0 15%;
+        text-align: right;
+
+        .btn-active {
+            max-width: 120px;
+        }
+    
+        @include respond-to("phone-wide" and "tablet") {
+            text-align: center;
+        }
+    }
+}

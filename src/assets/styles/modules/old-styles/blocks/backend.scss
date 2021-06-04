@@ -1,0 +1,61 @@
+.backend-on-page {
+
+    .title {
+       margin-bottom: 51px;
+
+        @include respond-to("tablet") {
+            margin-bottom: 32px;
+        }
+    }
+
+    .text {
+        margin-bottom: 83px;
+
+        @include respond-to("tablet") {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.backend-info {
+
+    .title {
+        margin-top: 129px;
+        margin-bottom: 93px;
+
+        @include respond-to("tablet") {
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include respond-to("tablet") {
+            display: block;
+        }
+    }
+
+    &__icon {
+        flex: 0 0 10%;
+    }
+
+    &__text {
+        flex: 0 0 70%;
+        font-size: $font-18;
+        line-height: 145%;
+        letter-spacing: -.5px;
+        color: #5A5A5A;
+    }
+
+    &__bottom {
+        margin-top: 85px;
+        font-size: $font-18;
+        line-height: 145%;
+        letter-spacing: -.5px;
+        color: $text-color;
+    }
+}

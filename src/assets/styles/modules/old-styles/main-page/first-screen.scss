@@ -1,0 +1,100 @@
+.first-screen {
+    padding: 179px 0 70px 0;
+    background-image: url(../images/main-page/first-screen.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    &__title {
+        margin-bottom: 36px;
+        max-width: 463px;
+        @include respond-to("phone-wide") {
+            margin-top: 139px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 36px;
+        max-width: 463px;
+    }
+
+    &__items {
+        padding-top: 155px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include respond-to("tablet") {
+            padding-top: 50px;
+            align-items: flex-start;
+        }
+        
+    }
+
+    &__item {
+        flex: 0 0 30%;
+        max-width: 323px;
+        min-height: 0;
+        transition: all .2s ease-in;
+
+        &-title {
+            margin-bottom: 10px;
+            font-size: 28px;
+            line-height: 46px;
+            letter-spacing: -.1px;
+            color: $main;
+        }
+
+        &-text {
+            margin-bottom: 21px;
+            font-size: $small-font;
+            line-height: 145%;
+            letter-spacing: -.5px;
+            color: $text-color;
+        }
+
+        &-btn {
+            opacity: 0;
+            transition: all .3s linear;
+        }
+
+        &:hover {
+            min-height: 300px;
+
+            .btn-passive {
+                opacity: .5;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:first-child {
+            max-width: 323px;
+        }
+
+        &:nth-child(2) {
+            max-width: 251px;
+        }
+
+        &:last-child {
+            max-width: 292px;
+        }
+
+        @include respond-to("tablet") {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    @include respond-to("tablet") {
+        padding: 360px 0 40px 0;
+        background-position: -180px 0px;
+    }
+
+    @include respond-to("phone-wide") {
+        background-position: -80px 0px;
+        padding: 50px 0 40px 0;
+    }
+}

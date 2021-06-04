@@ -1,0 +1,210 @@
+.header {
+    margin-top: 32px;
+    padding: 11px 0;
+
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+.b-menu {
+    display: none;
+}
+
+//burger
+@include respond-to("tablet") {
+    //$color-stack:
+    //        (group: primary, id: normal, color: #fff),
+    //        (group: complement, id: normal, color: #444);
+    //
+    //@function color($group, $shade:normal, $transparency:1) {
+    //    @each $color in $color-stack {
+    //        $c-group: map-get($color, group);
+    //        $c-shade: map-get($color, id);
+    //        @if($group == map-get($color, group) and $shade == map-get($color, id)){
+    //            @return rgba(map-get($color, color), $transparency);
+    //        }
+    //    }
+    //}
+
+
+    @keyframes slideInLeft {
+        0% {
+            transform: translate3d(250px, 0, 0);
+            visibility: visible;
+        }
+
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes slideOutLeft {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(250px, 0, 0);
+            visibility: hidden;
+        }
+    }
+
+    .b-nav {
+        position: absolute;
+        z-index: 11;
+
+        &:not(.open) {
+            visibility: hidden;
+        }
+
+        li {
+            //color: color(complement);
+            list-style-type: none;
+            padding: 10px;
+            text-align: left;
+            transform: translateX(250px);
+        }
+
+        li:not(.open) {
+            animation-duration: .4s;
+            animation-fill-mode: both;
+            animation-name: slideOutLeft;
+        }
+
+        li:first-child {
+            padding-top: (30px + 60px + 30px);
+        }
+
+        &.open {
+            visibility: visible;
+
+            li {
+                animation-duration: .4s;
+                animation-fill-mode: both;
+                animation-name: slideInLeft;
+            }
+        }
+    }
+
+    .b-link {
+        background: transparent;
+        border-left: $black solid 2px;
+        color: $black;
+        font-size: 24px;
+        font-weight: 300;
+        margin-right: 30px;
+        text-decoration: none;
+        transition: all .4s ease;
+        width: auto;
+
+        &:hover,
+        &--active {
+            border-left: $black solid 2px;
+            padding-left: 30px;
+        }
+    }
+
+    .b-menu {
+        background: $white;
+        border: $white solid 2px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        height: 60px;
+        padding-left: (60px / 2 - (25px / 2) - 2);
+        padding-top: (60px  / 2 - (25px / 2));
+        position: relative;
+        transition: all .4s ease;
+        user-select: none;
+        width: 60px;
+        z-index: 12;
+
+        &:hover {
+            border: $black solid 2px;
+        }
+    }
+
+    .b-bun {
+        background: $black;
+        position: relative;
+        transition: all .4s ease;
+
+        &--top {
+            height: 2px;
+            top: 0;
+            width: 25px;
+        }
+
+        &--mid {
+            height: 2px;
+            top: 8px;
+            width: 25px;
+        }
+
+        &--bottom {
+            height: 2px;
+            top: 16px;
+            width: 25px;
+        }
+    }
+
+    .b-brand {
+        //color: color(primary);
+        //font-size: 24px;
+        //font-weight: 300;
+        //margin-right: 30px;
+        position: relative;
+        //text-decoration: none;
+        //top: -(60px / 2 - (24px / 2.8));
+        transition: all .4s ease;
+        z-index: 13;
+    }
+
+    .b-container {
+        height: 60px;
+        right: 30px;
+        position: absolute;
+        top: 30px;
+
+        &:hover:not(.open) {
+            .bun-top,
+            .bun-mid,
+            .bun-bottom {
+                background: color(primary);
+            }
+        }
+
+        &.open {
+            .b-main {
+                border: $black solid 2px;
+            }
+
+            .b-bun--top {
+                background: $black;
+                top: 9px;
+                transform: rotate(45deg);
+            }
+
+            .b-bun--mid {
+                opacity: 0;
+            }
+
+            .b-bun--bottom {
+                background: $black;
+                top: 5px;
+                transform: rotate(-45deg);
+            }
+
+            .b-brand {
+                color: $black;
+            }
+        }
+    }
+}
+
+

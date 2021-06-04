@@ -1,0 +1,53 @@
+.advantages {
+    padding-bottom: 64px;
+    @include respond-to("phone-wide") {
+        padding-bottom: 0;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        margin-top: 100px;
+        flex: 0 0 24%;
+        text-align: center;
+
+        svg {
+            max-width: 78px;
+            max-height: 78px;
+
+            @include respond-to("tablet") {
+                max-width: 100px;
+                max-height: 100px;
+            }
+            @include respond-to("phone-wide") {
+                max-width: 160px;
+                max-height: 160px;
+            }
+        }
+
+        @include respond-to("tablet") {
+            flex: 0 0 50%;
+        }
+    }
+
+    &__title {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: -.5px;
+        color: $darkgrey-color;
+    }
+
+    .btn-active {
+        display: block;
+        margin: 68px auto;
+    }
+}

@@ -1,0 +1,32 @@
+.support {
+    background-color: $lightgrey-bg;
+    padding-top: 159px;
+    padding-bottom: 159px;
+
+    .title {
+        margin-bottom: 37px;
+    }
+
+    .text {
+        margin-bottom: 46px;
+    }
+
+    .advantages__items {
+        max-width: 680px;
+        margin-left: 0;
+        margin-bottom: 71px;
+
+        @include respond-to("tablet") {
+            margin-bottom: 31px;
+        }
+    }
+
+    .advantages__item {
+        margin-top: 0;
+    }
+
+    @include respond-to("tablet") {
+        padding-top: 59px;
+        padding-bottom: 59px;
+    }
+}

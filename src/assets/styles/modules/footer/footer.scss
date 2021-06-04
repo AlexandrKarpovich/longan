@@ -1,0 +1,79 @@
+.footer {
+    background: $black;
+    color: $white;
+    padding: 150px 0 30px;
+
+    svg {
+        path.text {
+            fill: $white;
+        }
+    }
+    &__top {
+        margin-bottom: 51px;
+        display: flex;
+        flex-direction: column;
+
+        @include respond-to-min("tablet") {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            text-align: left;
+        }
+
+        &__left {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: -0.8px;
+            color: #fff;
+            .mail {
+                margin-top: 18px;
+                color: #745EF9;
+            }
+        }
+
+        &__right {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 508px;
+            width: 100%;
+
+            @include respond-to-min("tablet") {
+                padding-left: 106px;
+                border-left: 1px solid #D4D4D4;
+            }
+        }
+    }
+
+    &__bottom,
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .privacy__link {
+        color: #979EA6;
+        text-decoration: none;
+        margin-right: 85px;
+        transition: all .3s ease-in;
+
+        &:hover {
+            color: $white;
+        }
+    }
+    .copy {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 24px;
+        color: #979EA6;
+    }
+
+    .menu {
+        margin-bottom: 64px;
+        &__link {
+            color: rgba(255, 255, 255, 0.9);
+            &:hover {
+                color: #a394ff;
+            }
+        }
+    }
+}

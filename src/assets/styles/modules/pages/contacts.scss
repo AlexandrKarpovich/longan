@@ -1,0 +1,41 @@
+.contacts {
+
+    .main-screen {
+        padding: 119px 0 215px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include respond-to-min("phablet") {
+            flex-wrap: wrap;
+        }
+
+        .title {
+            text-align: left;
+            //min-width: 450px;
+            padding-bottom: 50px;
+        }
+
+        .location {
+            max-width: 461px;
+            width: 100%;
+            justify-content: space-between;
+            text-align: left;
+            .item {
+                //&:first-child {
+                //    padding-right: 153px;
+                //}
+                &__text {
+                    color: #383838;
+
+                }
+            }
+            .address {
+                .item__text:nth-child(3) {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}

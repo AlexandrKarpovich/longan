@@ -1,0 +1,15 @@
+.we-work {
+    margin-top: 132px;
+
+    .title {
+        margin-bottom: 21px;
+    }
+
+    .backend__items {
+        margin-top: 68px;
+    }
+
+    @include respond-to("tablet") {
+        margin-top: 32px;
+    }
+}

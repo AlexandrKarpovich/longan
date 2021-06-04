@@ -1,0 +1,70 @@
+.form-small {
+    width: 513px;
+    height: 66px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+    transition: all .4s ease;
+    border-radius: 20px;
+
+    &:hover {
+        width: 520px;
+        height: 68px;
+        background: $white;
+        .form-small__input {
+            width: 105%;
+            height: 103%;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        color: #696969;
+        border: 1px solid #745EF9;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 25px 200px 25px 20px;
+        transition: all .4s ease;
+        background: transparent;
+
+
+    }
+    &__btn {
+        position: absolute;
+        right: 1%;
+        bottom: 15%;
+        width: 193.58px;
+        height: 48.11px;
+        background: #745EF9;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12.0264px 40px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 120%;
+        color: $white;
+        border: 1px solid #745EF9;
+        outline: none;
+        cursor: pointer;
+        transition: all .4s ease;
+
+        &:hover {
+            width: 205.58px;
+            bottom: 0;
+            right: 0;
+            height: 66px;
+            background: $white;
+            color: #745EF9;
+        }
+    }
+}
